@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaGraduationCap  } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -139,6 +139,18 @@ export default function Intro() {
         >
           <FaGithubSquare />
         </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-2xl rounded-full 
+            focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition 
+            cursor-pointer border border-gray-300 dark:bg-white/10 dark:text-white/60"
+          href="https://scholar.google.com/citations?hl=en&user=X1VzZrMAAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGraduationCap  />
+        </a>
+
       </motion.div>
     </section>
   );
