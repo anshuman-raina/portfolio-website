@@ -1,10 +1,16 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
+import msstatsImg from "@/public/msstats.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import ionlogo from "@/public/ion.png";
+import maitlogo from "@/public/mait.png";
+import nulogo from "@/public/nu.png";
+import techmojologo from "@/public/techmojo.png";
+import quantumImg from "@/public/Quantum.png";
+import emptyShelfImg from "@/public/empty.png";
+import webImg from "@/public/Web.png";
+import tripit from "@/public/TripIt.png";
+import finvest from "@/public/Finvest.png";
 
 export const links = [
   {
@@ -35,73 +41,95 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "B.Tech: Computer Science Engineering",
+    location: "New Delhi, INDIA",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "Graduated from Maharaja Agrasen Institute of Technology, with major project on Using C++ for ML Algorithms, and minor project on leveraging Quantum Computing for decryption. ",
+    // icon: React.createElement(LuGraduationCap),
+    icon: maitlogo,
+    date: "2015 - 2019",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Software Developer : SDE 1",
+    location: "Noida, INDIA",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Worked as a Software Developer, rotating in teams in Fixed Income Domain, developing Front and Back-office Trading solutions and providing client support.",
+    icon: ionlogo,
+    date: "2019 - 2022",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Senior Software Developer : SDE 2",
+    location: "Hyderabad, INDIA",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Worked on designing microservices from scratch on Golang, and became the primary SME of the feature. Integrated third party APIs and oversaw go-live to European markets.",
+    // icon: React.createElement(CgWorkAlt),
+    icon: techmojologo,
+    date: "2022 - 2023",
+  },
+  {
+    title: "Master's of Science: Northeastern University",
+    location: "Boston, MA",
+    description:
+      "Been a TA since May 2024. Selected for Fall'24 Research Apprenticeship program. Also working as a Research Developer towards my Master's Thesis project on MS-based protemoics, continued from my apprenticeship.",
+    // icon: React.createElement(FaUniversity),
+    icon: nulogo,
+    date: "2024 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "MSStats - open source tool for proteomics",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Developed and maintained a benchmarking framework for this open-source proteomics library. Automated performance validation across datasets using GitHub Actions, improving statistical accuracy and reproducibility.",
+    tags: ["R", "CI/CD", "High Performance Computing(HPC)","Github Actions"],
+    imageUrl: msstatsImg,
   },
   {
-    title: "rmtDev",
+    title: "Detecting next Financial Crash using Quantum Circuits",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Developed a Quantum circuit which predicts Financial Crashes based on theory of Betti Numbers and Laplacian of Betty Curves.",
+    tags: ["Python", "Qiskit", "IBMQ", "QBraid"],
+    imageUrl: quantumImg,
   },
   {
-    title: "Word Analytics",
+    title: "Kambaz - Online Learning Tool",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      " Developed a full stack Learning Management System using MERN stack, enabling role-based access for faculty and students to manage courses, modules, assignments, quizzes, and enrollments with seamless CRUD operations.",
+    tags: ["React", "Express.js", "Node.js", "Redux"],
+    imageUrl: webImg,
   },
+  {
+    title: "Empty Shelf Detection",
+    description:
+      "Built a deep-learning-based system to detect empty shelves in retail stores. Integrated with inventory management systems to provide real-time stock alerts",
+    tags: ["Python", "TensorFlow", "OpenCV", "FastAPI", "React"],
+    imageUrl: emptyShelfImg,
+  },
+  {
+    title: "Collab Travel Planner",
+    description:
+      "Designed a collaborative travel planning tool that enables users to create, share, and optimize itineraries, activities, adventures and accomodations.",
+    tags: ["Streamlit", "Flask", "PostGreSQL", "MongoDB"],
+    imageUrl: tripit,
+  },
+  {
+    title: "Finvest - Financial Learning platform",
+    description:
+      "Developed a stock investing simulator with high-performance, maintainable code using MVC framework, following a test-driven development (TDD) approach and ensuring robust unit testing with JUnit.",
+    tags: ["Java", "Swing GUI", "JUnit", "Design Patterns"],
+    imageUrl: finvest,
+  },
+  
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "Java", "Go (Golang)", "Python", "R", "C#", "C++", "JavaScript", "TypeScript", 
+  "SQL", "Objective-C", "Kotlin", "Groovy", "Matlab", "Hibernate", "Guice", "gRPC", 
+  "Robot Framework", "RESTful APIs", "Kafka", "Salesforce API", "React", "RabbitMQ", 
+  "Scala", "Flask", "Spring", "Spring Boot", "Node.js", "Angular", "GORM", "Zookeeper", 
+  "Express.js", "FastAPI", "Git", "Docker", "Kubernetes", "Maven", "JIRA", "Jenkins", 
+  "Power BI", "GCP", "AWS", "GitHub Actions", "High Performance Cluster (HPC)", 
+  "Oracle", "MySQL", "MongoDB", "Linux (Ubuntu, CentOS)", "Elasticsearch", "Prometheus", 
+  "Grafana"
 ] as const;
