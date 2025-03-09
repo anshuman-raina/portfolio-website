@@ -30,7 +30,8 @@ export default function SiteCounter() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-black text-white px-5 py-3 rounded-lg shadow-lg flex items-center gap-3 dark:bg-gray-900"
+        className="px-5 py-3 rounded-lg shadow-lg flex items-center gap-3
+          bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white"
       >
         <span className="text-2xl">👀</span>
         <span className="text-xl font-semibold">
@@ -40,7 +41,13 @@ export default function SiteCounter() {
 
       {/* 🌙 Theme Toggle */}
       <button
-        className="bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+        className={`w-[3rem] h-[3rem] backdrop-blur-[0.5rem] border border-opacity-40 shadow-2xl rounded-full flex items-center justify-center
+          transition-all hover:scale-[1.15] active:scale-105
+          ${
+            theme === "light"
+              ? "bg-gray-200 text-gray-900 border-gray-300"
+              : "bg-gray-900 text-white border-gray-700"
+          }`}
         onClick={toggleTheme}
       >
         {theme === "light" ? <BsSun /> : <BsMoon />}
