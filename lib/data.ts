@@ -22,24 +22,24 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
+    name: "Experience",
+    hash: "#experience",
   },
   {
     name: "Skills",
     hash: "#skills",
   },
   {
-    name: "Experience",
-    hash: "#experience",
+    name: "Work Experience",
+    hash: "#workexperience",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
   },
   {
     name: "Contact",
     hash: "#contact",
-  },
-  {
-    name: "Work Experience",
-    hash: "#workexperience",
   }
 ] as const;
 
@@ -85,44 +85,50 @@ export const projectsData = [
   {
     title: "MSStats - open source tool for proteomics",
     description:
-      "Developed and maintained a benchmarking framework for this open-source proteomics library. Automated performance validation across datasets using GitHub Actions, improving statistical accuracy and reproducibility.",
-    tags: ["R", "CI/CD", "High Performance Computing(HPC)","Github Actions"],
+      "Developed and maintained a benchmarking framework for an open-source proteomics library.",
+    tags: ["R", "CI/CD", "HPC","Github Actions"],
     imageUrl: msstatsImg,
+    githubUrl: "https://github.com/Vitek-Lab/MSstats",
   },
   {
     title: "Detecting next Financial Crash using Quantum Circuits",
     description:
-      "Developed a Quantum circuit which predicts Financial Crashes based on theory of Betti Numbers and Laplacian of Betty Curves.",
-    tags: ["Python", "Qiskit", "IBMQ", "QBraid"],
+      "Designed a Quantum circuit to predict Financial Crashes on Betti Numbers and Betty Curves.",
+    tags: ["Qiskit", "IBMQ", "QBraid"],
     imageUrl: quantumImg,
+    githubUrl: "https://github.com/anshuman-raina/2025-Moodys",
   },
   {
     title: "Kambaz - Online Learning Tool",
     description:
-      " Developed a full stack Learning Management System using MERN stack, enabling role-based access for faculty and students to manage courses, modules, assignments, quizzes, and enrollments with seamless CRUD operations.",
-    tags: ["React", "Express.js", "Node.js", "Redux"],
+      "Created a Learning Management System using MERN stack.",
+    tags: ["MongoDB", "Express.js", "React", "Node.js"],
     imageUrl: webImg,
+    githubUrl: "https://github.com/anshuman-raina/2025-Moodys",
   },
   {
     title: "Empty Shelf Detection",
     description:
-      "Built a deep-learning-based system to detect empty shelves in retail stores. Integrated with inventory management systems to provide real-time stock alerts",
+      "Built a deep-learning system to detect empty shelves in retail stores.",
     tags: ["Python", "TensorFlow", "OpenCV", "FastAPI", "React"],
     imageUrl: emptyShelfImg,
+    githubUrl: "https://github.com/anshuman-raina/FAI_Fall24",
   },
   {
     title: "Collab Travel Planner",
     description:
-      "Designed a collaborative travel planning tool that enables users to create, share, and optimize itineraries, activities, adventures and accomodations.",
+      "Implemented a collaborative travel planning tool to enable users to create, share, and optimize itineraries.",
     tags: ["Streamlit", "Flask", "PostGreSQL", "MongoDB"],
     imageUrl: tripit,
+    githubUrl: "https://github.com/anshuman-raina/Travel-Itinerary-Planner",
   },
   {
     title: "Finvest - Financial Learning platform",
     description:
-      "Developed a stock investing simulator with high-performance, maintainable code using MVC framework, following a test-driven development (TDD) approach and ensuring robust unit testing with JUnit.",
+      "Created a stock investing simulator using MVC on core JAVA using JUnit and TDD.",
     tags: ["Java", "Swing GUI", "JUnit", "Design Patterns"],
     imageUrl: finvest,
+    githubUrl: "https://github.khoury.northeastern.edu/anshumanraina/pdp_assignment",
   },
   
 ] as const;

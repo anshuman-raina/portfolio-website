@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare, FaGraduationCap  } from "react-icons/fa";
+import { FaGithubSquare, FaGraduationCap } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -58,36 +58,45 @@ export default function Intro() {
 
       {/* Intro Text */}
       <motion.h1
-        className="mb-10 mt-6 px-6 text-2xl font-medium leading-[1.5] sm:text-4xl"
+        className="mt-6 px-6 text-2xl font-medium leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Anshuman Raina.</span> I'm a{" "}
-        <span className="font-bold">Graduate student at Northeastern University </span>
-        with <span className="font-bold">4.5 years</span> of software engineering experience in Fintech domain.
+        <span className="font-bold">
+          Hello, I'm Anshuman Raina.
+        </span>
+        <br />
+        <br />
+        I'm a <span className="font-bold">Graduate student at Northeastern University</span>
+        with <span className="font-bold">4.5 years</span> of professional software engineering experience.
+      </motion.h1>
 
-        <br /><br />
-        Currently, I am working as a:
-        <ul className="list-disc list-inside mt-4 text-lg text-gray-800 dark:text-gray-300">
+      {/* Experience Highlights */}
+      <motion.div
+        className="mt-8 text-lg text-gray-800 dark:text-gray-300"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <h2 className="text-xl font-semibold mb-4">I am also:</h2>
+        <ul className="list-disc list-inside space-y-3">
           <li>
-            <span className="font-bold">Graduate Teaching Assistant</span> for Programming Design,
-            focusing on Design Patterns & Object-Oriented System Design.
+            <span className="font-bold">A Graduate Teaching Assistant</span> for Programming Design, focusing on Design Patterns & Object-Oriented System Design.
           </li>
           <li>
-            <span className="font-bold">Research Developer</span> at Vitek Lab, working on my Master's Thesis
-            related to <span className="italic">MSstats</span>, an open-source MS-based proteomics modeling library.
+            <span className="font-bold">A Research Developer</span> at Vitek Lab, working towards my Master's Thesis <i>(planned)</i>
+            {" "} related to <span className="italic">MSstats</span>, an open-source MS-based proteomics modeling library.
           </li>
         </ul>
-      </motion.h1>
+      </motion.div>
 
       {/* Action Buttons */}
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
+        className="mt-10 flex flex-wrap items-center justify-center gap-4 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-
+        {/* Download CV Button */}
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
             focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer 
@@ -95,62 +104,62 @@ export default function Intro() {
           href="/CV.pdf"
           download
         >
-          Download CV{" "}
+          Download CV
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
-        
+
         {/* Contact Me Button */}
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
-            focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-blue-600 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
+            focus:scale-110 hover:scale-110 hover:bg-blue-700 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
-        {/* Download CV Button */}
+        {/* Social Links */}
+        <div className="flex gap-4">
+          {/* LinkedIn */}
+          <a
+            className="text-blue-600 hover:text-blue-800 bg-white p-4 flex items-center gap-2 rounded-full 
+              focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer 
+              border border-gray-300 dark:bg-white/10 dark:text-white/60"
+            href="https://linkedin.com/in/anshuman-raina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsLinkedin className="text-2xl" />
+          </a>
 
+          {/* GitHub */}
+          <a
+            className="text-gray-900 hover:text-black bg-white p-4 flex items-center gap-2 text-2xl rounded-full 
+              focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition 
+              cursor-pointer border border-gray-300 dark:bg-white/10 dark:text-white/60"
+            href="https://github.com/anshuman-raina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithubSquare />
+          </a>
 
-        {/* LinkedIn Button */}
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full 
-            focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer 
-            border border-gray-300 dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com/in/anshuman-raina"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BsLinkedin className="text-2xl" />
-        </a>
-
-        {/* GitHub Button */}
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-2xl rounded-full 
-            focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition 
-            cursor-pointer border border-gray-300 dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/anshuman-raina"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithubSquare />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-2xl rounded-full 
-            focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition 
-            cursor-pointer border border-gray-300 dark:bg-white/10 dark:text-white/60"
-          href="https://scholar.google.com/citations?hl=en&user=X1VzZrMAAAAJ"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGraduationCap  />
-        </a>
-
+          {/* Google Scholar */}
+          <a
+            className="text-red-500 hover:text-red-700 bg-white p-4 flex items-center gap-2 text-2xl rounded-full 
+              focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition 
+              cursor-pointer border border-gray-300 dark:bg-white/10 dark:text-white/60"
+            href="https://scholar.google.com/citations?hl=en&user=X1VzZrMAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGraduationCap />
+          </a>
+        </div>
       </motion.div>
     </section>
   );

@@ -12,6 +12,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  githubUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -46,6 +47,19 @@ export default function Project({
               </li>
             ))}
           </ul>
+
+          {/* GitHub Button */}
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 px-5 py-2 border border-gray-800 text-gray-800 dark:border-white dark:text-white rounded-md 
+              hover:bg-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition"
+            >
+              View on GitHub
+            </a>
+          )}
         </div>
 
         <Image

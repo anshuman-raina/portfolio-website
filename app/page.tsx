@@ -16,8 +16,8 @@ export default function Home() {
       <About />
       <Experience />
       <Skills />
-      <Projects />
       <WorkExperience/>
+      <Projects />
       <Contact />
       <SiteCounter/>
     </main>

@@ -18,19 +18,22 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
-      
-      <p className="mb-3">
-        I’m a <span className="font-medium">Software Engineer</span> who loves building 
-        <span className="font-medium"> scalable, high-performance applications</span>—because slow software is a crime. 
-        Currently pursuing my <span className="font-medium">Master’s in Computer Science</span> at Northeastern University, 
-        I’ve worked across <span className="font-medium">fintech, iGaming, AI-driven applications,</span> and open-source research, 
-        solving problems that make engineers reconsider their career choices.
-      </p>
 
-      <p>
-        <span className="italic">When I’m not coding</span>, you’ll find me diving into <b>Fantasy and Magic</b>, playing <b>football or swimming</b>, 
-        or lost in a <b>Wikipedia rabbit hole</b> about AI, history, and why we still don’t have flying cars. I’m always looking for 
-        innovative projects where I can make an impact—and maybe break a few things (for science, of course). 
+      <p className="mb-3">
+        I thrive on challenge. I seek out work where I am forced to adapt, where I must learn something new.{" "}  
+        <b>Routine is comfortable, but stagnation is unbearable.</b>  
+        That is why, during my Master’s, my main focus is to explore as many technologies as I can.
+        
+        In the past year, I have delved into <b>Quantum Computing, High Performance Computing,  
+        Bioinformatics, Machine Learning, and Deep Learning</b>. Each has taught me something new,  
+        shaped the way I think, and forced me to sharpen skills I never knew I needed.
+      </p>
+      <br/>
+
+      <p className="mb-3">
+        <span className="italic">When I’m not coding</span>, you’ll find me immersed in <b>Fantasy and Magic</b>,  
+        playing <b>football or swimming</b>, or lost in a <b>Wikipedia rabbit hole</b> about AI, history,  
+        and why we still don’t have flying cars.
       </p>
     </motion.section>
   );
