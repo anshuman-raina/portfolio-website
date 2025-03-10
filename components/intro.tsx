@@ -67,7 +67,7 @@ export default function Intro() {
         </span>
         <br />
         <br />
-        I'm a <span className="font-bold">Graduate student at Northeastern University</span>
+        I'm a <span className="font-bold">Graduate student at Northeastern University</span>{" "}
         with <span className="font-bold">4.5 years</span> of professional software engineering experience.
       </motion.h1>
 
